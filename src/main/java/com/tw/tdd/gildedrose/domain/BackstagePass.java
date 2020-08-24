@@ -21,6 +21,8 @@ public class BackstagePass extends Item{
             }else{
                 this.setQuality(50);
             }
+        }else{
+            this.setQuality(0);
         }
         this.setSellIn(this.getSellIn() - 1);
     }
