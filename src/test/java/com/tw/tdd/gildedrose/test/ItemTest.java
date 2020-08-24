@@ -1,9 +1,11 @@
 package com.tw.tdd.gildedrose.test;
 
+import com.tw.tdd.gildedrose.domain.Item;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class ItemTest {
@@ -13,9 +15,9 @@ public class ItemTest {
 
     @Test
     public void given_quality_not_negative_and_not_more_than_50_when_init_item_then_get_item() {
-        int quality1= 0;
-        int quality2= 25;
-        int quality3 = 50;
+        Integer quality1= 0;
+        Integer quality2= 25;
+        Integer quality3 = 50;
 
         Item item1 = new Item();
         item1.setQuality(quality1);
