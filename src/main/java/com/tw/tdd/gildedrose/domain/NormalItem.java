@@ -4,7 +4,10 @@ public class NormalItem extends Item{
 
     @Override
     public void sellInDecrease() {
-        this.setSellIn(getSellIn() -1);
-        this.setQuality(this.getQuality() - 1);
+
+        this.setSellIn(this.getSellIn() -1);
+        if(this.getQuality() > 0){
+            this.setQuality(this.getQuality() - 1);
+        }
     }
 }
