@@ -44,4 +44,15 @@ public class ItemTest {
         expectedEx.expectMessage("INVALID QUALITY");
         item.setQuality(negativeQuality);
     }
+
+    @Test
+    public void given_quality_is_more_than_50_when_init_item_then_get_exception() throws InvalidQualityException {
+        Integer negativeQuality= 51;
+
+        Item item = new Item();
+
+        expectedEx.expect(InvalidQualityException.class);
+        expectedEx.expectMessage("INVALID QUALITY");
+        item.setQuality(negativeQuality);
+    }
 }
