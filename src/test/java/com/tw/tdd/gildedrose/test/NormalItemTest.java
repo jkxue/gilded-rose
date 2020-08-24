@@ -1,6 +1,7 @@
 package com.tw.tdd.gildedrose.test;
 
 import com.tw.tdd.gildedrose.domain.Item;
+import com.tw.tdd.gildedrose.domain.NormalItem;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

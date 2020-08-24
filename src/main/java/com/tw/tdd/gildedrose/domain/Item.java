@@ -2,8 +2,13 @@ package com.tw.tdd.gildedrose.domain;
 
 import com.tw.tdd.gildedrose.exception.InvalidQualityException;
 import lombok.Getter;
+import lombok.Setter;
 
 public class Item {
+
+    @Getter
+    @Setter
+    private Integer sellIn;
 
     @Getter
     private Integer quality;
@@ -14,4 +19,6 @@ public class Item {
         }
         this.quality = quality;
     }
+
+    public void sellInDecrease() {}
 }
