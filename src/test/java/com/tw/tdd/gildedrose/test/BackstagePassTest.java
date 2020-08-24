@@ -1,3 +1,4 @@
+import com.tw.tdd.gildedrose.domain.BackstagePass;
 import com.tw.tdd.gildedrose.domain.Item;
 import org.junit.Test;
 
