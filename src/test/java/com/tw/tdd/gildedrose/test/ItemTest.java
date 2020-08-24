@@ -1,12 +1,12 @@
 package com.tw.tdd.gildedrose.test;
 
 import com.tw.tdd.gildedrose.domain.Item;
+import com.tw.tdd.gildedrose.exception.InvalidQualityException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class ItemTest {
 
@@ -35,13 +35,13 @@ public class ItemTest {
     }
 
     @Test
-    public void given_quality_is_negative_when_init_item_then_get_exception() throws InvalidQualityException{
+    public void given_quality_is_negative_when_init_item_then_get_exception() throws InvalidQualityException {
         Integer negativeQuality= -1;
 
         Item item = new Item();
-        item.setQuality(negativeQuality);
 
         expectedEx.expect(InvalidQualityException.class);
         expectedEx.expectMessage("INVALID QUALITY");
+        item.setQuality(negativeQuality);
     }
 }
