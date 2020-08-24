@@ -9,7 +9,7 @@ public class Item {
     private Integer quality;
 
     public void setQuality(Integer quality) {
-        if(quality < 0){
+        if(quality < 0 || quality >= 50){
             throw new InvalidQualityException("INVALID QUALITY");
         }
         this.quality = quality;
