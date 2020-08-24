@@ -33,4 +33,15 @@ public class ItemTest {
         assertNotNull(item3);
         assertEquals(quality3, item3.getQuality());
     }
+
+    @Test
+    public void given_quality_is_negative_when_init_item_then_get_exception() throws InvalidQualityException{
+        Integer negativeQuality= -1;
+
+        Item item = new Item();
+        item.setQuality(negativeQuality);
+
+        expectedEx.expect(InvalidQualityException.class);
+        expectedEx.expectMessage("INVALID QUALITY");
+    }
 }
